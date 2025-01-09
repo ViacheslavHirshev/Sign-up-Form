@@ -3,52 +3,68 @@
     <head>
         <meta charset="UTF-8" />
         <title>Sign-up form</title>
+        <link rel="stylesheet" href="style.css" />
     </head>
 
     <body>
         <main class="main-container">
             <div class="ls-container">
-                <img src="/pictures/halie-west-unsplash.jpg" class="bg-image"/>
+                <div class="logo">
+                    <img src="/pictures/odin-lined.png"/>
+                    <p>Odin</p>
+                </div>
             </div>
 
             <div class="rs-container">
                 <div class="description-container">
-                    <p class="description">This is not a real service! You know you need something like this in your life
-                        to help you realize your deepest dreems.<br/>Sign up now to get started!<br/><br/>
-                        You know you want to!
+                    <p class="description">This is not a real online service! You know you need something like this in your life
+                        to help you realize your deepest dreems.<br/>Sign up <em>now</em> to get started!<br/><br/>
+                        You <em>know</em> you want to!
                     </p>
                 </div>
 
                 <div class="inputs-container">
                     <h2>Let's do this!</h2>
 
-                    <form action="#" method="post">
+                    <form action="#" method="get" id="input-form">
                         <div class="ls-input">
-                            <label for="first-name">First name</label>
-                            <input type="text" id="first-name" name="first_name"/>
+                            <div>
+                                <label for="first-name">First name</label>
+                                <input type="text" id="first-name" name="first_name"/>
+                            </div>
 
-                            <label for="email-address">Email</label>
-                            <input type="email" id="email-address" name="email" />
+                            <div>
+                                <label for="email-address">Email</label>
+                                <input type="email" id="email-address" name="email" />
+                            </div>
 
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password"/>
+                            <div>
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" pattern="[0-9a-zA-Z]{4,8}"/>
+                            </div>
                         </div>
 
                         <div class="rs-input">
-                            <label for="last-name">Last name</label>
-                            <input type="text" id="last-name" name="last_name"/>
+                            <div>
+                                <label for="last-name">Last name</label>
+                                <input type="text" id="last-name" name="last_name"/>
+                            </div>
 
-                            <label for="phone-number">Phone number</label>
-                            <input type="tel" id="phone-number" name="phone" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" />
+                            <div>
+                                <label for="phone-number">Phone number</label>
+                                <input type="tel" id="phone-number" name="phone" pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" />
+                            </div>
 
-                            <label for="password">Confirm password</label>
-                            <input type="password" id="password" name="password"/>
+                            <div>
+                                <label for="confirm-password">Confirm password</label>
+                                <input type="password" id="confirm-password" name="confirmed-password" pattern="[0-9a-fA-F]{4,8}"/>
+                            </div>
                         </div>
                     </form>
                 </div>
 
                 <div class="user-actions">
-                    <button type="submit" class="submit-button">Create Account</button>
+                    <button type="submit" class="submit-btn" form="input-form">Create Account</button>
                     <p>Already have an account? <a href="#" class="login-ref">Log in</a></p>
                 </div>
             </div>
